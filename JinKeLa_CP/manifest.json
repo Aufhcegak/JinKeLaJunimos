@@ -1,0 +1,11 @@
+{
+  "Name": "[CP] 金坷垃内容包",
+  "Author": "Claude",
+  "Version": "1.0.0",
+  "Description": "金坷垃数据:物品/配方/商店/贴图(效果逻辑由 JinKeLa.dll 处理)。",
+  "UniqueID": "Claude.JinKeLa.Content",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

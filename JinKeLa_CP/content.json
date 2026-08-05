@@ -1,0 +1,65 @@
+{
+  "Format": "2.7.0",
+  "Changes": [
+    // ============================================================
+    // 0. Load —— 注册贴图资产:16x32(0=物品图标, 1=田上贴图)
+    // ============================================================
+    {
+      "Action": "Load",
+      "Target": "Mods/Claude.JinKeLa/Sprites",
+      "FromFile": "assets/jinkela_sheet.png"
+    },
+    // ============================================================
+    // A. Data/Objects —— 金坷垃
+    //    Category -19(原版肥料分类)→ 施肥/放置/捡拾逻辑自动识别
+    //    田上效果不走原版 fertilizer 字段,由 JinKeLa.dll 处理
+    // ============================================================
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "Claude.JinKeLa": {
+          "Name": "Claude.JinKeLa",
+          "DisplayName": "金坷垃",
+          "Description": "世界级好肥料!掺了金坷垃,小麦亩产一千八。能让作物收获时 50% 概率产量翻倍,与原版肥料/生长激素完全共存。",
+          "Type": "Basic",
+          "Category": -19,
+          "Price": 200,
+          "Texture": "Mods/Claude.JinKeLa/Sprites",
+          "SpriteIndex": 0,
+          "Edibility": -300,
+          "ContextTags": [ "fertilizer_item", "color_yellow" ]
+        }
+      }
+    },
+
+    // ============================================================
+    // B. Data/CraftingRecipes —— 耕种9级解锁
+    //    格式:材料/Field/产物/大件bool/解锁/显示名
+    //    金锭(336)×1 + 铱锭(337)×1 + 纤维(771)×1 → 金坷垃×25
+    // ============================================================
+    {
+      "Action": "EditData",
+      "Target": "Data/CraftingRecipes",
+      "Entries": {
+        "Claude.JinKeLa": "336 1 337 1 771 1/Field/Claude.JinKeLa 25/false/farming 9/"
+      }
+    },
+
+    // ============================================================
+    // C. Data/Shops SeedShop —— 皮埃尔常驻 200g/个
+    // ============================================================
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "TargetField": [ "SeedShop", "Items" ],
+      "Entries": {
+        "Claude.JinKeLa": {
+          "Id": "Claude.JinKeLa",
+          "ItemId": "(O)Claude.JinKeLa",
+          "Price": 200
+        }
+      }
+    }
+  ]
+}

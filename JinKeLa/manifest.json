@@ -1,0 +1,10 @@
+{
+  "Name": "金坷垃 JinKeLa",
+  "Author": "Claude",
+  "Version": "1.0.0",
+  "Description": "世界名肥金坷垃:能提高50%作物产量(50%概率双倍收获),与原版肥料/生长激素完全独立共存。耕种9级解锁配方:金锭1+铱锭1+纤维1→金坷垃25个;皮埃尔商店200g/个。",
+  "UniqueID": "Claude.JinKeLa",
+  "EntryDll": "JinKeLa.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}
