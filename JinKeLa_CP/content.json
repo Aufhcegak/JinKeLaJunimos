@@ -24,9 +24,8 @@
           "Description": "世界级好肥料!掺了金坷垃,小麦亩产一千八。能让作物收获时 50% 概率产量翻倍,与原版肥料/生长激素完全共存。",
           "Type": "Basic",
           "Category": -19,
-          // Price=400:卖给 NPC 得一半 = 200(原版机制:卖价 = Price/2)
-          // 商店买入价单独在 Data/Shops 里设 200(见 C 段)
-          "Price": 400,
+          // Price=200:出货箱卖价 = Price/2 = 100;皮埃尔买入 200(商店条目 Price=200 覆盖)
+          "Price": 200,
           "Texture": "Mods/Claude.JinKeLa/Sprites",
           "SpriteIndex": 0,
           "Edibility": -300,
